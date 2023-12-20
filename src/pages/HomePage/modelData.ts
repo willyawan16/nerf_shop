@@ -18,6 +18,9 @@ export const modelData: Record<string, any> = {
             '1.png',
             '2.png',
             '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
         ]
         
     },

@@ -18,6 +18,7 @@ import PropagateLoader from 'react-spinners/PropagateLoader';
 import { modelData, modelDir } from '../HomePage/modelData';
 import { ResourceTracker } from './ResourceTracker';
 import { useMediaQuery } from 'react-responsive';
+import ReactPlayer from 'react-player';
 
 const resTracker = new ResourceTracker();
 const track = resTracker.track.bind(resTracker);
@@ -50,7 +51,7 @@ function ProductPage() {
     const defaultParagraph = {
         margin: 0,
     }
-
+    
     function initialize() {
         scene = new THREE.Scene();
     
@@ -374,12 +375,24 @@ function ProductPage() {
                     </h1>
                     <Box sx={{
                         // backgroundColor: 'blue', 
-                        height: isMobile ? 'auto' : '350px'
+                        height: isMobile ? 'auto' : '450px'
                     }}>
                         <p>{modelData[location.state.modelName].desc}</p>
+                        <Box sx={{paddingLeft: '50px', height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                            <h2>Photo Process:</h2>
+                            <ReactPlayer
+                                width={600}
+                                height={400} 
+                                url={'/bts.mp4'}
+                                playing={true}
+                                muted={true}
+                                controls={true}
+                            />
+                        </Box>
                     </Box>
                     <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
                         <Stack direction='column' spacing={1}>
+                            <br />
                             <p style={{...defaultParagraph, ...{marginRight: 10, marginBottom: 10, color: 'red', fontSize: '50px'}}}>
                                 <b>NT$ 999</b>
                             </p>
