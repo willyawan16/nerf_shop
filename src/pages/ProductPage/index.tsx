@@ -44,6 +44,7 @@ function ProductPage() {
     const boxRef = useRef<HTMLDivElement>(null);
     const loadingBoxRef = useRef<HTMLDivElement>(null);
     const [chosenImage, setChosenImage] = useState(0);
+    const [isLoading, setIsLoading] = useState(true)
     
     const ssLoc = modelDir + '/' + location.state.modelName + '/screenshots';
     const modelName = location.state.modelName;
@@ -223,6 +224,7 @@ function ProductPage() {
               setTimeout(() => {
                 if(loadingBoxRef.current)
                     loadingBoxRef.current!.style.display = 'none';
+                    setIsLoading(false)
               }, 1000);
             });
     }
@@ -268,7 +270,7 @@ function ProductPage() {
                 //     for (const material of object.material) cleanMaterial(material)
                 // }
             })
-            // renderer.renderLists.dispose();
+            renderer.renderLists.dispose();
         };
 
     }, [canvasRef, boxRef, loadingBoxRef])
@@ -349,7 +351,7 @@ function ProductPage() {
                                         component='div'
                                         key={index} 
                                         onClick={() => {
-                                            setChosenImage(index);
+                                            if(!isLoading)  setChosenImage(index);
                                         }}
                                         sx={{
                                             minWidth: isMobile ? '100px' : '200px', 
