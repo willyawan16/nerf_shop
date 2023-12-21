@@ -385,10 +385,11 @@ function ProductPage() {
                             <ReactPlayer
                                 width={600}
                                 height={400} 
-                                url={'/bts.mp4'}
+                                url={modelDir + '/' + modelName + '_phone/videos/' + modelData[location.state.modelName].videoName[0]}
                                 playing={true}
                                 muted={true}
                                 controls={true}
+                                loop={true} 
                             />
                         </Box>
                     </Box>

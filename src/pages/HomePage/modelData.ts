@@ -33,6 +33,9 @@ export const modelData: Record<string, any> = {
             '1.png',
             '2.png',
             '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
         ]
     },
     'zoro': {
@@ -44,6 +47,9 @@ export const modelData: Record<string, any> = {
             '1.png',
             '2.png',
             '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
         ]
     },
     'trunks': {
@@ -55,6 +61,9 @@ export const modelData: Record<string, any> = {
             '1.png',
             '2.png',
             '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
         ]
     },
 }
