@@ -278,14 +278,14 @@ function ProductPage() {
     const isMobile = useMediaQuery({ maxWidth: 767 })
 
     return(
-        <Box sx={{p: '50px', }}>
+        <Box sx={{p: '50px'}}>
             <Box sx={{
                 // backgroundColor: 'gray',
                 display: 'flex',
                 flexDirection: isMobile ? 'column' : 'row'
             }}>
                 <Box sx={{
-                    width: isMobile ? '100%' : '1200px',
+                    width: isMobile ? '100%' : '50%',
                     height: isMobile ? '500px' : '700px',
                     margin: '10px',
                 }}>
@@ -371,20 +371,20 @@ function ProductPage() {
                         </Box>
                     </Box>
                 </Box>
-                <Box sx={{paddingLeft: '20px', paddingTop: '50px', paddingRight: '50px'}}>
+                <Box sx={{paddingLeft: '20px', paddingTop: '50px', paddingRight: '50px', width: isMobile ? '100%' : '50%'}}>
                     <h1>
                         {modelData[location.state.modelName].name}
                     </h1>
                     <Box sx={{
                         // backgroundColor: 'blue', 
-                        height: isMobile ? 'auto' : '450px'
+                        height: 'auto'
                     }}>
                         <p>{modelData[location.state.modelName].desc}</p>
-                        <Box sx={{paddingLeft: '50px', height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                        <Box sx={{paddingLeft: '50px', height: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                             <h2>Photo Process:</h2>
                             <ReactPlayer
-                                width={600}
-                                height={400} 
+                                width={isMobile ? '100%' : '75%'}
+                                height={'auto'} 
                                 url={modelDir + '/' + modelName + '_phone/videos/' + modelData[location.state.modelName].videoName[0]}
                                 playing={true}
                                 muted={true}
@@ -393,6 +393,7 @@ function ProductPage() {
                             />
                         </Box>
                     </Box>
+                    <br />
                     <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
                         <Stack direction='column' spacing={1}>
                             <br />

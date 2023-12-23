@@ -6,6 +6,7 @@ export const modelList = [
     'kaido',
     'zoro',
     'trunks',
+    'law',
 ]
 
 export const modelData: Record<string, any> = {
@@ -22,7 +23,6 @@ export const modelData: Record<string, any> = {
         videoName: [
             'bts.mp4'
         ]
-        
     },
     'kaido': {
         name: 'Kaido',
@@ -55,6 +55,20 @@ export const modelData: Record<string, any> = {
     'trunks': {
         name: 'Trunks',
         desc: `Trunks (トランクス Torankusu) is a Human-type Earthling/Saiyan hybrid, the firstborn child and only son of Vegeta and Bulma and the older brother of Bulla.`,
+        price: 999,
+        imageName: [
+            '0.png',
+            '1.png',
+            '2.png',
+            '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
+        ]
+    },
+    'law': {
+        name: 'Law',
+        desc: `Trafalgar D. Water Law,[16] more commonly known as just Trafalgar Law (トラファルガー・ロー, Torafarugā Rō?) and by his epithet as the "Surgeon of Death", is a pirate from the North Blue and the captain and doctor of the Heart Pirates.`,
         price: 999,
         imageName: [
             '0.png',
