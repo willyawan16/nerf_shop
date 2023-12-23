@@ -116,9 +116,11 @@ function ProductPage() {
     }
 
     function renderViewer() {
-        renderer.setRenderTarget(null);
-        renderer.clear();
-        renderer.render(scene, camera);
+        if(renderer) {
+            renderer.setRenderTarget(null);
+            renderer.clear();
+            renderer.render(scene, camera);
+        }
     }
 
     function onWindowResize() {
@@ -271,6 +273,10 @@ function ProductPage() {
                 // }
             })
             renderer.renderLists.dispose();
+            renderer.dispose();
+            scene = null;
+            renderer = null;
+
         };
 
     }, [canvasRef, boxRef, loadingBoxRef])
