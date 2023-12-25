@@ -7,6 +7,7 @@ export const modelList = [
     'zoro',
     'trunks',
     'law',
+    'bluegoku'
 ]
 
 export const modelData: Record<string, any> = {
@@ -68,7 +69,21 @@ export const modelData: Record<string, any> = {
     },
     'law': {
         name: 'Law',
-        desc: `Trafalgar D. Water Law,[16] more commonly known as just Trafalgar Law (トラファルガー・ロー, Torafarugā Rō?) and by his epithet as the "Surgeon of Death", is a pirate from the North Blue and the captain and doctor of the Heart Pirates.`,
+        desc: `Trafalgar D. Water Law,[16] more commonly known as just Trafalgar Law (トラファルガー・ロー, Torafarugā Rō) and by his epithet as the "Surgeon of Death", is a pirate from the North Blue and the captain and doctor of the Heart Pirates.`,
+        price: 999,
+        imageName: [
+            '0.png',
+            '1.png',
+            '2.png',
+            '3.png',
+        ],
+        videoName: [
+            'bts.mp4'
+        ]
+    },
+    'bluegoku': {
+        name: 'Super Saiyan Blue Goku',
+        desc: `Super Saiyan Blue (超スーパーサイヤ人じんブルー Sūpā Saiya-jin Burū), also known as Super Saiyan God Super Saiyan (超スーパーサイヤ人じんゴッド超スーパーサイヤ人じん Sūpā Saiya-jin Goddo Sūpā Saiya-jin), is a powerful divine transformation and a transcended version of the Super Saiyan God form.`,
         price: 999,
         imageName: [
             '0.png',

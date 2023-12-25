@@ -40,8 +40,6 @@ function Home(props: IHomeProps) {
     ) => {
         setAlignment(newAlignment);
         localStorage.setItem("alignment", newAlignment as string);
-
-
     };
 
     useEffect(() => {
@@ -67,7 +65,7 @@ function Home(props: IHomeProps) {
                 fontSize: '40px', 
                 // backgroundColor: 'red'
             }}>
-                <h1>NeRF Tech Shop</h1>
+                <h1>AI Toy eStore</h1>
             </Box>
             
             {

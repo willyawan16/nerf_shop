@@ -52,6 +52,10 @@ function ProductPage() {
     const defaultParagraph = {
         margin: 0,
     }
+
+    useEffect(() => {
+        document.title = "Product: " + modelData[location.state.modelName].name
+    }, [])
     
     function initialize() {
         scene = new THREE.Scene();
@@ -387,7 +391,7 @@ function ProductPage() {
                     }}>
                         <p>{modelData[location.state.modelName].desc}</p>
                         <Box sx={{paddingLeft: '50px', height: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                            <h2>Photo Process:</h2>
+                            <h2>Capture Process:</h2>
                             <ReactPlayer
                                 width={isMobile ? '100%' : '75%'}
                                 height={'auto'} 
